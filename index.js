@@ -44,18 +44,54 @@ $(document).ready(() => {
 
   })
 
-  $(document).on('click', '.visitor-createTweet', function(event){
-    update();
-    $division = $('<div></div>')
-    $division.append(`<form><input type="text" name="message"><button type="submit" class="visitor-submitTweet">Post</button></form>`)
-    $body.prepend($division);
-    console.log('waiting for user input...')
-  })
+  // $(document).on('click', '.visitor-createTweet', function(event){
+  //   //update();
+  //   $division = $('<div></div>');
+  //   $division.append(`<form><input placeholder="Username..." type="text" class="input-username"/><input placeholder="Your message..." type="text" name="message" class="input-message"/><button type="submit" class="input-submission">Post</button></form>`)
+  //   $body.prepend($division);
+  //   console.log('waiting for user input...')
 
-  $(document).on('click', '.visitor-submitTweet', function(){
-    //let userInput = $('input').val();
-    console.log('hello world');
-  })
+  //   $('.input-submission').on('click', function(){
+
+  //     window.visitor = $('.input-username').val(); //assign window visitor to input argument
+
+  //     if (!streams.users[window.visitor]){
+  //       streams.users[window.visitor] = [];
+  //     }
+
+  //     console.log('window visitor assigned, attempting form submission...');
+  //     writeTweet($('.input-message').val());
+  //   });
+
+  // });
+
+  // let $tweetContents = $('.tweet-contents')
+  // let $hashtag = $tweetContents.slice($tweetContents.indexOf('#'));
+
+  // $(document).on('click', $hashtag, function(){
+
+  //   // for every Tweet on our website
+  //   let $byHashtag = streams.home.filter(function(tweet){
+  //     // ('.tweet-contents').slice($('.tweet-contents').indexOf('#')); equal to "#hashtag" from the "tweet-contents" class of a Tweet
+  //     if (tweet.message.includes($hashtag)){ // if the current Tweet includes the hashtag
+  //       return tweet; // return that tweet to be pushed to our array
+  //     }
+  //   }).map(function(tweet){                                         // from array produced from filter()
+  //     const $division = $('<div class="tweet-container"></div>');          // create a new $division that will receive modifications
+  //     const $tableHead = `<tr class="table-header"><th class="tweet-username">@${tweet.user}</th></tr>`;
+  //     const $tableBody = `<tr class="table-body"><td class="tweet-contents">${tweet.message}</td></tr>`;
+  //     const $tableFoot = `<tr class="table-footer"><td class="tweet-timestamp">${moment().format('lll')} - <i>${moment(tweet.created_at).startOf('second').fromNow()}</i></td></tr>`;
+  //     $division.prepend(`<table class="table-main">${$tableHead}${$tableBody}${$tableFoot}</table>`)
+  //     return $division; // return that $division so that we can append to $body
+  //   });
+
+  //   $body.html('');
+  //   $body.append($byHashtag);
+  //   $body.prepend('<button class="visitor-createTweet">+</button>'); // allows user to write a tweet
+  //   $body.prepend('<button class="refresh">&#x21bb;</button>'); // allows user to refresh feed
+
+  // });
+
 
   update();
 
